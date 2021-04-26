@@ -1,0 +1,27 @@
+<nav class="navbar fixed-top navbar-light bg-white">
+  <div class="container">
+    <div class="logo"></div>
+    <div>
+      <div
+        class="add-post"
+        data-toggle="modal"
+        data-target="#exampleModal"
+      ></div>
+      <a href="#" (click)="sair()" style="margin-left: 25px">Sair</a>
+    </div>
+  </div>
+</nav>
+
+<br /><br /><br />
+<div class="container">
+  <app-publicacoes #publicacoes></app-publicacoes>
+  <!--EventEmitter atualizarTimeLine vindo do filho, ou seja, incluir-publicacao
+  fará um event bind para um outro evento, chamado também atualizarTimeLine
+Para detalhar qual pertence da home e qual que vem de incluir-publicacao, vai o gabarito:
+    <app-incluir-publicacao (atualizarTimeLine HOME)="INCLUIR PUBLICACAO atualizarTimeLine()"></app-incluir-publicacao>
+
+-->
+  <app-incluir-publicacao
+    (atualizarTimeLine)="atualizarTimeLine()"
+  ></app-incluir-publicacao>
+</div>

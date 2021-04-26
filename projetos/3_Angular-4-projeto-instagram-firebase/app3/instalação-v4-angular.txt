@@ -1,0 +1,9 @@
+npm i npm i @angular/cli@1.1.0 
+
+animação
+
+npm i --save @angular/animations web-animations-js
+
+
+SDK firebase
+npm i --save firebase@4.5.1
